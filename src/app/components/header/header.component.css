@@ -1,0 +1,20 @@
+.navbar-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  height: 40px;
+  background: inherit;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}

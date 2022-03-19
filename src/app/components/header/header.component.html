@@ -1,1 +1,14 @@
-<p>header works!</p>
+<mat-toolbar>
+    <nav class="navbar-header">
+        <span>Burp HTTP history viewer</span>
+
+        <span class="toolbar-spacer"></span>
+
+        <button mat-icon-button aria-label="">
+            <mat-icon aria-hidden="false" aria-label="Open File" matTooltip="Open File" (click)="fileInput.click()">
+                file_open
+            </mat-icon>
+            <input #fileInput type="file" class="hidden" accept="*" />
+        </button>
+    </nav>
+</mat-toolbar>
