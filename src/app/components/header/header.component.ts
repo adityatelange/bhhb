@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   }
 
   selectedFile!: File;
+  selectedFileName!: string;
 
   fileChanged(event: Event): void {
     const target = event.target as HTMLInputElement;
@@ -24,6 +25,8 @@ export class HeaderComponent implements OnInit {
       this.selectedFile = files[0]
 
       console.log(this.selectedFile);
+
+      this.selectedFileName = this.selectedFile.name
     }
   }
 }
