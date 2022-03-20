@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import * as xml2js from 'xml2js';
 
 @Injectable({
   providedIn: 'root'
@@ -26,17 +27,19 @@ export class FileHandleService {
       if (!files.length) return
 
       this.selectedFile = files[0]
-
-      console.log(this.selectedFile);
-
       this.selectedFileName = this.selectedFile.name
 
       var reader = new FileReader();
       reader.readAsText(this.selectedFile);
       reader.onload = (_event) => {
-        console.log(reader.result);
+        xml2js.parseStringPromise(reader.result as string)
+          .then((content) => {
+            this.selectedFileContent = content
+          })
+          .catch((err) => {
+            console.log(err);
+          });
 
-        this.selectedFileContent = reader.result
         this.selectedFileData.next({
           selectedFileName: this.selectedFileName,
           selectedFileContent: this.selectedFileContent
