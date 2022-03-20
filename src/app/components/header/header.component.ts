@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FileHandleService } from "../../services/file-handle/file-handle.service"
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +11,15 @@ export class HeaderComponent implements OnInit {
 
   constructor(private FileHandleService: FileHandleService) { }
 
-  ngOnInit(): void {
-  }
-
+  fileSub!: Subscription
   selectedFileName!: string;
+
+  ngOnInit(): void {
+    this.fileSub = this.FileHandleService.getselectedFileDataListener()
+      .subscribe((selectedFileData: { selectedFileName: string }) => {
+        this.selectedFileName = selectedFileData.selectedFileName
+      })
+  }
 
   fileChanged(event: Event): void {
     this.FileHandleService.fileChange(event)
