@@ -12,4 +12,18 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectedFile!: File;
+
+  fileChanged(event: Event): void {
+    const target = event.target as HTMLInputElement;
+    const files = target.files as FileList;
+
+    if (files) {
+      if (!files.length) return
+
+      this.selectedFile = files[0]
+
+      console.log(this.selectedFile);
+    }
+  }
 }

@@ -8,7 +8,7 @@
             <mat-icon aria-hidden="false" aria-label="Open File" matTooltip="Open File" (click)="fileInput.click()">
                 file_open
             </mat-icon>
-            <input #fileInput type="file" class="hidden" accept="*" />
+            <input #fileInput type="file" class="hidden" accept="*" (change)="fileChanged($event)" />
         </button>
     </nav>
 </mat-toolbar>
