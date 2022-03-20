@@ -1,0 +1,24 @@
+.navbar-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  color: inherit;
+  margin: auto 10px;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbar-footer {
+    background: rgb(29, 30, 32);
+  }
+}

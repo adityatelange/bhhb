@@ -4,8 +4,29 @@ app-header {
   left: 0;
   right: 0;
   z-index: 2;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
+
 app-main {
   margin-top: 40px;
-  height: calc(100% - 40px);
-} 
+  height: calc(100% - 60px);
+  margin-bottom: 20px;
+}
+
+app-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  app-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  app-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
