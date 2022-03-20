@@ -4,8 +4,8 @@
 
         <span class="toolbar-spacer"></span>
         <span>{{ this.selectedFileName }}</span>
-        <button mat-icon-button aria-label="">
-            <mat-icon aria-hidden="false" aria-label="Open File" matTooltip="Open File" (click)="fileInput.click()">
+        <button mat-icon-button aria-label="" matTooltip="Open File" (click)="fileInput.click()">
+            <mat-icon aria-hidden="false" aria-label="Open File" >
                 file_open
             </mat-icon>
             <input #fileInput type="file" class="hidden" accept="*" (change)="fileChanged($event)" />
