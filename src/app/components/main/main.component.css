@@ -15,6 +15,11 @@ tr.mat-header-row {
   height: 30px;
 }
 
+.mat-table .mat-cell,
+.mat-table .mat-header-cell {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;
@@ -42,4 +47,14 @@ tr.mat-header-row {
   .mat-row:hover {
     background-color: rgba(255, 255, 255, 0.05);
   }
+
+  .mat-table .mat-cell,
+  .mat-table .mat-header-cell {
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+.mat-table .mat-cell:not(:nth-child(1)),
+.mat-table .mat-header-cell:not(:nth-child(1)) {
+  padding: 0 10px;
 }
