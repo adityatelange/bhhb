@@ -1,101 +1,111 @@
-<table mat-table [dataSource]="dataSource" matSort cdkDropList cdkDropListOrientation="horizontal"
-    (cdkDropListDropped)="drop($event)">
+<mat-grid-list cols="4" rowHeight="50%" gutterSize="0px">
+    <mat-grid-tile [colspan]="4">
+        <table mat-table [dataSource]="dataSource" matSort cdkDropList cdkDropListOrientation="horizontal"
+            (cdkDropListDropped)="drop($event)">
 
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
+            <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <ng-container matColumnDef="position">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> # </th>
-        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> # </th>
+                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
 
-    <!-- host Column -->
-    <ng-container matColumnDef="host">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Host </th>
-        <td mat-cell *matCellDef="let element"> {{element.host}} </td>
-    </ng-container>
+            <!-- host Column -->
+            <ng-container matColumnDef="host">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Host </th>
+                <td mat-cell *matCellDef="let element"> {{element.host}} </td>
+            </ng-container>
 
-    <!-- method Column -->
-    <ng-container matColumnDef="method">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Method </th>
-        <td mat-cell *matCellDef="let element"> {{element.method}} </td>
-    </ng-container>
+            <!-- method Column -->
+            <ng-container matColumnDef="method">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Method </th>
+                <td mat-cell *matCellDef="let element"> {{element.method}} </td>
+            </ng-container>
 
-    <!-- url Column -->
-    <ng-container matColumnDef="path">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> URL </th>
-        <td mat-cell *matCellDef="let element"> {{element.path}} </td>
-    </ng-container>
+            <!-- url Column -->
+            <ng-container matColumnDef="path">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> URL </th>
+                <td mat-cell *matCellDef="let element"> {{element.path}} </td>
+            </ng-container>
 
-    <!-- Params Column -->
-    <!-- <ng-container matColumnDef="params">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Params </th>
-        <td mat-cell *matCellDef="let element"> {{element.params}} </td>
-    </ng-container> -->
+            <!-- Params Column -->
+            <!-- <ng-container matColumnDef="params">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Params </th>
+                <td mat-cell *matCellDef="let element"> {{element.params}} </td>
+            </ng-container> -->
 
-    <!-- Edited Column -->
-    <!-- <ng-container matColumnDef="edited">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Edited </th>
-        <td mat-cell *matCellDef="let element"> {{element.edited}} </td>
-    </ng-container> -->
+            <!-- Edited Column -->
+            <!-- <ng-container matColumnDef="edited">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Edited </th>
+                <td mat-cell *matCellDef="let element"> {{element.edited}} </td>
+            </ng-container> -->
 
-    <!-- Status Column -->
-    <ng-container matColumnDef="status">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Status </th>
-        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
-    </ng-container>
+            <!-- Status Column -->
+            <ng-container matColumnDef="status">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Status </th>
+                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+            </ng-container>
 
-    <ng-container matColumnDef="responselength">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Length </th>
-        <td mat-cell *matCellDef="let element"> {{element.responselength}} </td>
-    </ng-container>
+            <ng-container matColumnDef="responselength">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Length </th>
+                <td mat-cell *matCellDef="let element"> {{element.responselength}} </td>
+            </ng-container>
 
-    <ng-container matColumnDef="mimetype">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> MIME type </th>
-        <td mat-cell *matCellDef="let element"> {{element.mimetype}} </td>
-    </ng-container>
+            <ng-container matColumnDef="mimetype">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> MIME type </th>
+                <td mat-cell *matCellDef="let element"> {{element.mimetype}} </td>
+            </ng-container>
 
-    <ng-container matColumnDef="extension">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Extension </th>
-        <td mat-cell *matCellDef="let element"> {{element.extension}} </td>
-    </ng-container>
+            <ng-container matColumnDef="extension">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Extension </th>
+                <td mat-cell *matCellDef="let element"> {{element.extension}} </td>
+            </ng-container>
 
-    <!-- <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Title </th>
-        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-    </ng-container> -->
+            <!-- <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Title </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+            </ng-container> -->
 
-    <ng-container matColumnDef="comment">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Comment </th>
-        <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
-    </ng-container>
+            <ng-container matColumnDef="comment">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Comment </th>
+                <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
+            </ng-container>
 
-    <!-- <ng-container matColumnDef="">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> TLS </th>
-        <td mat-cell *matCellDef="let element"> {{element.info}} </td>
-    </ng-container> -->
+            <!-- <ng-container matColumnDef="">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> TLS </th>
+                <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+            </ng-container> -->
 
-    <ng-container matColumnDef="ip">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> IP </th>
-        <td mat-cell *matCellDef="let element"> {{element.ip}} </td>
-    </ng-container>
+            <ng-container matColumnDef="ip">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> IP </th>
+                <td mat-cell *matCellDef="let element"> {{element.ip}} </td>
+            </ng-container>
 
-    <!-- <ng-container matColumnDef="">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Cookies </th>
-        <td mat-cell *matCellDef="let element"> {{element.info}} </td>
-    </ng-container> -->
+            <!-- <ng-container matColumnDef="">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Cookies </th>
+                <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+            </ng-container> -->
 
-    <ng-container matColumnDef="time">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Time </th>
-        <td mat-cell *matCellDef="let element"> {{element.time}} </td>
-    </ng-container>
+            <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Time </th>
+                <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+            </ng-container>
 
-    <ng-container matColumnDef="port">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Listener Port </th>
-        <td mat-cell *matCellDef="let element"> {{element.port}} </td>
-    </ng-container>
+            <ng-container matColumnDef="port">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Listener Port </th>
+                <td mat-cell *matCellDef="let element"> {{element.port}} </td>
+            </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2">
+        2
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2">
+        3
+    </mat-grid-tile>
+</mat-grid-list>

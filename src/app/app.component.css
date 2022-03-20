@@ -8,9 +8,8 @@ app-header {
 }
 
 app-main {
-  margin-top: 40px;
-  height: calc(100% - 60px);
-  margin-bottom: 20px;
+  height: calc(100vh - 60px);
+  margin: 40px 0 20px 0;
 }
 
 app-footer {
