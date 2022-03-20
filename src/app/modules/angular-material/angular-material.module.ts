@@ -8,6 +8,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { AngularSplitModule } from 'angular-split';
 
 @NgModule({
   declarations: [],
@@ -23,6 +24,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatSortModule,
     DragDropModule,
     MatGridListModule,
+    AngularSplitModule,
   ]
 })
 export class AngularMaterialModule { }

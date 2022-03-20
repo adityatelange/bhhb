@@ -58,3 +58,8 @@ tr.mat-header-row {
 .mat-table .mat-header-cell:not(:nth-child(1)) {
   padding: 0 10px;
 }
+
+.table-container {
+  height: 100%;
+  overflow: auto;
+}

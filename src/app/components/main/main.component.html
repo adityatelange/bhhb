@@ -1,10 +1,10 @@
-<mat-grid-list cols="4" rowHeight="50%" gutterSize="0px">
-    <mat-grid-tile [colspan]="4">
+<as-split direction="vertical" [gutterSize]=7>
+    <as-split-area [size]="60">
         <table mat-table [dataSource]="dataSource" matSort cdkDropList cdkDropListOrientation="horizontal"
             (cdkDropListDropped)="drop($event)">
 
             <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
+                The actual rendered columns are set as a property on the row definition" -->
 
             <!-- Position Column -->
             <ng-container matColumnDef="position">
@@ -101,11 +101,15 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2">
-        2
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2">
-        3
-    </mat-grid-tile>
-</mat-grid-list>
+    </as-split-area>
+    <as-split-area [size]="40">
+        <as-split direction="horizontal" [gutterSize]=7>
+            <as-split-area>
+                <p>LEFT</p>
+            </as-split-area>
+            <as-split-area>
+                <p>RIGHT</p>
+            </as-split-area>
+        </as-split>
+    </as-split-area>
+</as-split>
