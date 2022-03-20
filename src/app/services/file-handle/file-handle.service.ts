@@ -11,9 +11,9 @@ export class FileHandleService {
 
   private selectedFile!: File;
   private selectedFileName!: string;
-  private selectedFileContent!: string | ArrayBuffer | null;
+  private selectedFileContent!: object;
 
-  private selectedFileData = new Subject<{ selectedFileName: string, selectedFileContent: string | ArrayBuffer | null }>();
+  private selectedFileData = new Subject<{ selectedFileName: string, selectedFileContent: object }>();
 
   getselectedFileDataListener() {
     return this.selectedFileData.asObservable();
@@ -35,15 +35,14 @@ export class FileHandleService {
         xml2js.parseStringPromise(reader.result as string)
           .then((content) => {
             this.selectedFileContent = content
+            this.selectedFileData.next({
+              selectedFileName: this.selectedFileName,
+              selectedFileContent: this.selectedFileContent
+            })
           })
           .catch((err) => {
             console.log(err);
           });
-
-        this.selectedFileData.next({
-          selectedFileName: this.selectedFileName,
-          selectedFileContent: this.selectedFileContent
-        })
       }
     }
   }
