@@ -1,1 +1,100 @@
-<p>main works!</p>
+<table mat-table [dataSource]="dataSource" matSort>
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- host Column -->
+    <ng-container matColumnDef="host">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Host </th>
+        <td mat-cell *matCellDef="let element"> {{element.host}} </td>
+    </ng-container>
+
+    <!-- method Column -->
+    <ng-container matColumnDef="method">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Method </th>
+        <td mat-cell *matCellDef="let element"> {{element.method}} </td>
+    </ng-container>
+
+    <!-- url Column -->
+    <ng-container matColumnDef="path">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> URL </th>
+        <td mat-cell *matCellDef="let element"> {{element.path}} </td>
+    </ng-container>
+
+    <!-- Params Column -->
+    <!-- <ng-container matColumnDef="params">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Params </th>
+        <td mat-cell *matCellDef="let element"> {{element.params}} </td>
+    </ng-container> -->
+
+    <!-- Edited Column -->
+    <!-- <ng-container matColumnDef="edited">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Edited </th>
+        <td mat-cell *matCellDef="let element"> {{element.edited}} </td>
+    </ng-container> -->
+
+    <!-- Status Column -->
+    <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="responselength">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Length </th>
+        <td mat-cell *matCellDef="let element"> {{element.responselength}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mimetype">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> MIME type </th>
+        <td mat-cell *matCellDef="let element"> {{element.mimetype}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="extension">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Extension </th>
+        <td mat-cell *matCellDef="let element"> {{element.extension}} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+        <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="comment">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Comment </th>
+        <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> TLS </th>
+        <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="ip">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> IP </th>
+        <td mat-cell *matCellDef="let element"> {{element.ip}} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Cookies </th>
+        <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="time">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="port">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Listener Port </th>
+        <td mat-cell *matCellDef="let element"> {{element.port}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

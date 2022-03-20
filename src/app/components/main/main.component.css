@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+}
+
+.mat-row:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+tr.mat-row,
+tr.mat-footer-row {
+  height: 25px;
+}
+
+tr.mat-header-row {
+  height: 30px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mat-table {
+    background: 0;
+  }
+  .mat-cell,
+  .mat-footer-cell {
+    color: rgba(255, 255, 255, 0.87);
+  }
+  mat-row {
+    border-bottom-color: #e0e0e0;
+  }
+  mat-row,
+  mat-header-row,
+  mat-footer-row,
+  th.mat-header-cell,
+  td.mat-cell,
+  td.mat-footer-cell {
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .mat-header-cell {
+    color: rgba(255, 255, 255, 0.54);
+  }
+
+  .mat-row:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
