@@ -5,3 +5,7 @@ app-header {
   right: 0;
   z-index: 2;
 }
+app-main {
+  margin-top: 40px;
+  height: calc(100% - 40px);
+} 
