@@ -11,10 +11,16 @@
 
 mat-toolbar {
   height: 40px;
-  background: inherit;
+  background: rgb(255, 255, 255);
   color: inherit;
 }
 
 .hidden {
   display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  mat-toolbar {
+    background: rgb(29, 30, 32);
+  }
 }
