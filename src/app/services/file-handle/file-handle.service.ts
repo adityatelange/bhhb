@@ -9,7 +9,6 @@ export class FileHandleService {
 
   constructor() { }
 
-  private selectedFile!: File | null;
   private selectedFileName!: string | null;
   private selectedFileContent!: object | null;
 
@@ -26,11 +25,10 @@ export class FileHandleService {
     if (files) {
       if (!files.length) return
 
-      this.selectedFile = files[0]
-      this.selectedFileName = this.selectedFile.name
+      this.selectedFileName = files[0].name
 
       var reader = new FileReader();
-      reader.readAsText(this.selectedFile);
+      reader.readAsText(files[0]);
       reader.onload = (_event) => {
         xml2js.parseStringPromise(reader.result as string)
           .then((content) => {
@@ -48,7 +46,6 @@ export class FileHandleService {
   }
 
   async fileClear() {
-    this.selectedFile = null
     this.selectedFileName = null
     this.selectedFileContent = null
     this.selectedFileData.next({
