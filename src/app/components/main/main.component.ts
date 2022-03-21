@@ -37,9 +37,11 @@ export class MainComponent implements OnInit {
 
   elementDataGen(content: any) {
     this.ELEMENT_DATA = []
+    let position = 1
     content.items.item.forEach((element: any) => {
       this.ELEMENT_DATA.push(
         {
+          position: position,
           ip: element.host[0].$.ip,
           host: element.protocol + '://' + element.host[0]._,
           port: element.port,
@@ -55,6 +57,7 @@ export class MainComponent implements OnInit {
           extension: element.extension != 'null' ? element.extension : ''
         }
       )
+      position += 1;
     });
   }
 
