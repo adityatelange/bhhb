@@ -7,7 +7,6 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { AngularSplitModule } from 'angular-split';
 
 @NgModule({
@@ -23,7 +22,6 @@ import { AngularSplitModule } from 'angular-split';
     MatTableModule,
     MatSortModule,
     DragDropModule,
-    MatGridListModule,
     AngularSplitModule,
   ]
 })
