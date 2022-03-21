@@ -54,7 +54,9 @@ export class MainComponent implements OnInit {
           url: element.url,
           time: element.time,
           mimetype: element.mimetype,
-          extension: element.extension != 'null' ? element.extension : ''
+          extension: element.extension != 'null' ? element.extension : '',
+          request: this.atobReqRes(element.request),
+          response: this.atobReqRes(element.response)
         }
       )
       position += 1;
@@ -63,5 +65,15 @@ export class MainComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.displayedColumns, event.previousIndex, event.currentIndex);
+  }
+
+  private atobReqRes(query: any): string {
+    try {
+      return atob(query[0]._)
+    } catch (error) {
+      console.log(error);
+      console.log(query);
+    }
+    return ''
   }
 }
