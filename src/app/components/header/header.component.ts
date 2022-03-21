@@ -26,4 +26,10 @@ export class HeaderComponent implements OnInit {
       .then(() => { })
       .catch(() => { })
   }
+
+  fileRemoved(): void {
+    this.FileHandleService.fileClear()
+      .then(() => { })
+      .catch(() => { })
+  }
 }

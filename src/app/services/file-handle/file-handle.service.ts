@@ -9,9 +9,9 @@ export class FileHandleService {
 
   constructor() { }
 
-  private selectedFile!: File;
-  private selectedFileName!: string;
-  private selectedFileContent!: object;
+  private selectedFile!: File | null;
+  private selectedFileName!: string | null;
+  private selectedFileContent!: object | null;
 
   private selectedFileData = new Subject<{ selectedFileName: string, selectedFileContent: object }>();
 
@@ -36,8 +36,8 @@ export class FileHandleService {
           .then((content) => {
             this.selectedFileContent = content
             this.selectedFileData.next({
-              selectedFileName: this.selectedFileName,
-              selectedFileContent: this.selectedFileContent
+              selectedFileName: this.selectedFileName!,
+              selectedFileContent: this.selectedFileContent!
             })
           })
           .catch((err) => {
@@ -45,5 +45,15 @@ export class FileHandleService {
           });
       }
     }
+  }
+
+  async fileClear() {
+    this.selectedFile = null
+    this.selectedFileName = null
+    this.selectedFileContent = null
+    this.selectedFileData.next({
+      selectedFileName: null!,
+      selectedFileContent: null!
+    })
   }
 }

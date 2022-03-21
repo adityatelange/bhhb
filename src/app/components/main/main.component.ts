@@ -25,6 +25,13 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.fileSub = this.FileHandleService.getselectedFileDataListener()
       .subscribe((selectedFileData: { selectedFileName: string, selectedFileContent: object }) => {
+        if (!selectedFileData.selectedFileContent || !selectedFileData.selectedFileName) {
+          this.dataSource = new MatTableDataSource();
+          this.selectedFileName = selectedFileData.selectedFileName;
+          this.selectedFileContent = selectedFileData.selectedFileContent;
+          this.clickedRow = undefined;
+          return
+        }
         this.selectedFileName = selectedFileData.selectedFileName
         this.selectedFileContent = selectedFileData.selectedFileContent
         console.log(this.selectedFileContent);
