@@ -103,13 +103,13 @@
                 [class.row-is-clicked]="clickedRow == row"></tr>
         </table>
     </as-split-area>
-    <as-split-area [size]="40">
+    <as-split-area [size]="40" *ngIf="clickedRow">
         <as-split direction="horizontal" [gutterSize]=7>
             <as-split-area>
-                <pre *ngIf="clickedRow">{{ clickedRow.request }}</pre>
+                <pre>{{ clickedRow.request }}</pre>
             </as-split-area>
             <as-split-area>
-                <pre *ngIf="clickedRow">{{ clickedRow.response }}</pre>
+                <pre>{{ clickedRow.response }}</pre>
             </as-split-area>
         </as-split>
     </as-split-area>
