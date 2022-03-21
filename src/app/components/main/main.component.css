@@ -20,6 +20,11 @@ tr.mat-header-row {
   border-right: 1px solid rgba(0, 0, 0, 0.12);
 }
 
+.row-is-clicked,
+.row-is-clicked:hover {
+  background-color: rgba(0, 0, 0, 0.144);
+}
+
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;

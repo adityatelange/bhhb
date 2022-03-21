@@ -99,7 +99,8 @@
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="clickedRow = row"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="clickedRow = row"
+                [class.row-is-clicked]="clickedRow == row"></tr>
         </table>
     </as-split-area>
     <as-split-area [size]="40">
