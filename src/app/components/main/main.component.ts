@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { FileHandleService } from '../../services/file-handle/file-handle.service'
 import { Subscription } from 'rxjs';
 import { MatSort } from '@angular/material/sort';
@@ -76,5 +76,11 @@ export class MainComponent implements OnInit {
       console.log(query);
     }
     return ''
+  }
+
+  @HostListener('window:keydown.esc', ['$event'])
+  clearclickedRow(event: KeyboardEvent) {
+    event.preventDefault();
+    this.clickedRow = undefined
   }
 }
