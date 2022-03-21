@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'burp-http-history-viewer'`, () => {
+  it(`should have as title 'burp-http-history-browser'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('burp-http-history-viewer');
+    expect(app.title).toEqual('burp-http-history-browser');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('burp-http-history-viewer app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('burp-http-history-browser app is running!');
   });
 });

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/burp-http-history-viewer'),
+      dir: require('path').join(__dirname, './coverage/burp-http-history-browser'),
       subdir: '.',
       reporters: [
         { type: 'html' },

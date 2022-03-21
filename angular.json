@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "burp-http-history-viewer": {
+    "burp-http-history-browser": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/burp-http-history-viewer",
+            "outputPath": "dist/burp-http-history-browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "burp-http-history-viewer:build:production"
+              "browserTarget": "burp-http-history-browser:build:production"
             },
             "development": {
-              "browserTarget": "burp-http-history-viewer:build:development"
+              "browserTarget": "burp-http-history-browser:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "burp-http-history-viewer:build"
+            "browserTarget": "burp-http-history-browser:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "burp-http-history-viewer"
+  "defaultProject": "burp-http-history-browser"
 }
