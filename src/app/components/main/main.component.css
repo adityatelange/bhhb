@@ -31,6 +31,10 @@ as-split > as-split-area > pre {
   height: 100%;
 }
 
+* > .as-split-area {
+  overflow-x: auto;
+}
+
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;
