@@ -99,16 +99,16 @@
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="clickedRow = row"></tr>
         </table>
     </as-split-area>
     <as-split-area [size]="40">
         <as-split direction="horizontal" [gutterSize]=7>
             <as-split-area>
-                <p>LEFT</p>
+                <pre *ngIf="clickedRow">{{ clickedRow.request }}</pre>
             </as-split-area>
             <as-split-area>
-                <p>RIGHT</p>
+                <pre *ngIf="clickedRow">{{ clickedRow.response }}</pre>
             </as-split-area>
         </as-split>
     </as-split-area>
