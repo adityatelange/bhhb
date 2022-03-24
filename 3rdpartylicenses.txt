@@ -60,6 +60,9 @@ THE SOFTWARE.
 @angular/platform-browser
 MIT
 
+@angular/service-worker
+MIT
+
 angular-split
 Apache-2.0
                                  Apache License

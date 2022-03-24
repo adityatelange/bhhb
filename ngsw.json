@@ -1,0 +1,75 @@
+{
+  "configVersion": 1,
+  "timestamp": 1648141445935,
+  "index": "/bhhb/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/bhhb/favicon.ico",
+        "/bhhb/index.html",
+        "/bhhb/main.fc42c805327cfb7e.js",
+        "/bhhb/polyfills.d3ba9eb6e9bb6105.js",
+        "/bhhb/runtime.6795f4c7f348193d.js",
+        "/bhhb/styles.885719437f53bf80.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/bhhb/assets/apple-touch-icon.png",
+        "/bhhb/assets/bhhb.png",
+        "/bhhb/assets/icon-192-maskable.png",
+        "/bhhb/assets/icon-192.png",
+        "/bhhb/assets/icon-512-maskable.png",
+        "/bhhb/assets/icon-512.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/bhhb/assets/apple-touch-icon.png": "08d0771426d5f21fa654e853709e757fe5c1780d",
+    "/bhhb/assets/bhhb.png": "5730f4cb3e7c898d81f65f2e5dbd7ce20d61e573",
+    "/bhhb/assets/icon-192-maskable.png": "8a01c4fb68a5cb77b48d799aea70e9ae069c04fd",
+    "/bhhb/assets/icon-192.png": "929858f9bed4a08a385de91ee60e08b0965dad2f",
+    "/bhhb/assets/icon-512-maskable.png": "0e48727efa9a91ba9a04ee6de65e329f470e8e4e",
+    "/bhhb/assets/icon-512.png": "49aa78aaa6a196cf70606163c2aedfcbe8c79e42",
+    "/bhhb/favicon.ico": "8184af0ce54ab85bf9d0b9f92364330dcda88853",
+    "/bhhb/index.html": "6bcc0ecff864a09aa31fc3ce7b405640e4f1ba7b",
+    "/bhhb/main.fc42c805327cfb7e.js": "aea60f10f7008b103ce407f5a0cf471b9a51ff36",
+    "/bhhb/polyfills.d3ba9eb6e9bb6105.js": "6055dadb0fef67994ae772ce5e2648f9fa1def8b",
+    "/bhhb/runtime.6795f4c7f348193d.js": "4c111d7c759a3c06b1bdd676aa7fdbc3ed4a8487",
+    "/bhhb/styles.885719437f53bf80.css": "9b26a17f8b6512bbee2044716fe72c1316967b9f"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
