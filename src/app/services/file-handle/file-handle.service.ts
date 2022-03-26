@@ -2,6 +2,16 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import * as xml2js from 'xml2js';
 
+export interface BurpExport {
+  'items': {
+    '$': {
+      'burpVersion': string,
+      'exportTime': string
+    },
+    'item': Array<object>
+  }
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -9,10 +19,10 @@ export class FileHandleService {
 
   constructor() { }
 
-  private selectedFileName!: string | null;
-  private selectedFileContent!: object | null;
+  private selectedFileName!: string | undefined;
+  private selectedFileContent!: BurpExport | undefined;
 
-  private selectedFileData = new Subject<{ selectedFileName: string, selectedFileContent: object }>();
+  private selectedFileData = new Subject<{ selectedFileName: string, selectedFileContent: BurpExport | undefined }>();
 
   getselectedFileDataListener() {
     return this.selectedFileData.asObservable();
@@ -32,10 +42,10 @@ export class FileHandleService {
       reader.onload = (_event) => {
         xml2js.parseStringPromise(reader.result as string)
           .then((content) => {
-            this.selectedFileContent = content
+            this.selectedFileContent = content;
             this.selectedFileData.next({
               selectedFileName: this.selectedFileName!,
-              selectedFileContent: this.selectedFileContent!
+              selectedFileContent: this.selectedFileContent
             })
           })
           .catch((err) => {
@@ -46,11 +56,11 @@ export class FileHandleService {
   }
 
   async fileClear() {
-    this.selectedFileName = null
-    this.selectedFileContent = null
+    this.selectedFileName = undefined
+    this.selectedFileContent = undefined
     this.selectedFileData.next({
-      selectedFileName: null!,
-      selectedFileContent: null!
+      selectedFileName: this.selectedFileName!,
+      selectedFileContent: this.selectedFileContent!
     })
   }
 }

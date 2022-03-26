@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { BurpExport } from '../../services/file-handle/file-handle.service'
 
 @Component({
   selector: 'app-main',
@@ -16,7 +17,7 @@ export class MainComponent implements OnInit {
 
   fileSub!: Subscription
   selectedFileName!: string;
-  selectedFileContent!: object
+  selectedFileContent!: BurpExport | undefined;
   displayedColumns: string[] = ['position', 'host', 'method', 'path', 'status', 'responselength', 'mimetype', 'extension', 'comment', 'ip', 'time', 'port'];
   dataSource = new MatTableDataSource();
   ELEMENT_DATA: any = [];
@@ -24,7 +25,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.fileSub = this.FileHandleService.getselectedFileDataListener()
-      .subscribe((selectedFileData: { selectedFileName: string, selectedFileContent: object }) => {
+      .subscribe((selectedFileData: { selectedFileName: string, selectedFileContent: BurpExport | undefined }) => {
         if (!selectedFileData.selectedFileContent || !selectedFileData.selectedFileName) {
           this.dataSource = new MatTableDataSource();
           this.selectedFileName = selectedFileData.selectedFileName;
