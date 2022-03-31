@@ -1,6 +1,7 @@
 {
   "name": "burp-http-history-browser",
   "version": "0.0.0",
+  "description": "A tool to browse/view exported HTTP history from Burp",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,6 +10,14 @@
     "test": "ng test"
   },
   "private": true,
+  "homepage": "https://github.com/adityatelange/bhhb#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adityatelange/bhhb"
+  },
+  "bugs": "https://github.com/adityatelange/bhhb/issues",
+  "license": "MIT",
+  "author": "Aditya Telange",
   "dependencies": {
     "@angular/animations": "~13.3.0",
     "@angular/cdk": "^13.3.0",
