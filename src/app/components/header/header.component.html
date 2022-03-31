@@ -16,14 +16,16 @@
         </a>
         <span class="toolbar-spacer"></span>
         <span>{{ this.selectedFileName }}</span>
-        <button mat-icon-button aria-label="" matTooltip="Open File" (click)="fileInput.click()" *ngIf="!this.selectedFileName">
-            <mat-icon aria-hidden="false" aria-label="Open File" >
+        <button mat-icon-button aria-label="Open File" matTooltip="Open File" (click)="fileInput.click()"
+            *ngIf="!this.selectedFileName">
+            <mat-icon aria-hidden="false" aria-label="Open File">
                 file_open
             </mat-icon>
             <input #fileInput type="file" class="hidden" accept="*" (change)="fileChanged($event)" />
         </button>
-        <button mat-icon-button aria-label="" matTooltip="Open File" (click)="fileRemoved()" *ngIf="this.selectedFileName">
-            <mat-icon aria-hidden="false" aria-label="Clear selected File" >
+        <button mat-icon-button aria-label="Clear selected File" matTooltip="Clear selected File" (click)="fileRemoved()"
+            *ngIf="this.selectedFileName">
+            <mat-icon aria-hidden="false" aria-label="Clear selected File">
                 clear
             </mat-icon>
         </button>
