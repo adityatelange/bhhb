@@ -18,7 +18,7 @@ export class MainComponent implements OnInit {
   fileSub!: Subscription
   selectedFileName!: string;
   selectedFileContent!: BurpExport | undefined;
-  displayedColumns: string[] = ['position', 'host', 'method', 'path', 'status', 'responselength', 'mimetype', 'extension', 'comment', 'ip', 'time', 'port'];
+  displayedColumns: string[] = ['position', 'host', 'method', 'path', 'status', 'responselength', 'mimetype', 'extension', 'comment', 'ip', 'time'];
   dataSource = new MatTableDataSource();
   ELEMENT_DATA: any = [];
   clickedRow!: any;
