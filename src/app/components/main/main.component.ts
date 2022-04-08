@@ -52,7 +52,7 @@ export class MainComponent implements OnInit {
         {
           position: position,
           ip: element.host[0].$.ip,
-          host: element.protocol + '://' + element.host[0]._,
+          host: element.protocol + '://' + element.host[0]._ + this.portAssign(element.protocol, element.port),
           port: element.port,
           protocol: element.protocol,
           method: element.method,
@@ -84,6 +84,16 @@ export class MainComponent implements OnInit {
       console.log(query);
     }
     return ''
+  }
+
+  private portAssign(protocol: any, port: any): string {
+    if (protocol[0] === "https" && port[0] === "443") {
+      return ''
+    } else if (protocol[0] === "http" && port[0] === "80") {
+      return ''
+    } else {
+      return ':' + port
+    }
   }
 
   @HostListener('window:keydown.esc', ['$event'])
