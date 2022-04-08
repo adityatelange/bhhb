@@ -9,25 +9,25 @@
             <!-- Position Column -->
             <ng-container matColumnDef="position">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> # </th>
-                <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.position}}"> {{element.position}} </td>
             </ng-container>
 
             <!-- host Column -->
             <ng-container matColumnDef="host">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Host </th>
-                <td mat-cell *matCellDef="let element"> {{element.host}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.host}}"> {{element.host}} </td>
             </ng-container>
 
             <!-- method Column -->
             <ng-container matColumnDef="method">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Method </th>
-                <td mat-cell *matCellDef="let element"> {{element.method}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.method}}"> {{element.method}} </td>
             </ng-container>
 
             <!-- url Column -->
             <ng-container matColumnDef="path">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> URL </th>
-                <td mat-cell *matCellDef="let element"> {{element.path}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.path}}"> {{element.path}} </td>
             </ng-container>
 
             <!-- Params Column -->
@@ -45,22 +45,23 @@
             <!-- Status Column -->
             <ng-container matColumnDef="status">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Status </th>
-                <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.status}}"> {{element.status}} </td>
             </ng-container>
 
             <ng-container matColumnDef="responselength">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Length </th>
-                <td mat-cell *matCellDef="let element"> {{element.responselength}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.responselength}}"> {{element.responselength}}
+                </td>
             </ng-container>
 
             <ng-container matColumnDef="mimetype">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> MIME type </th>
-                <td mat-cell *matCellDef="let element"> {{element.mimetype}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.mimetype}}"> {{element.mimetype}} </td>
             </ng-container>
 
             <ng-container matColumnDef="extension">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Extension </th>
-                <td mat-cell *matCellDef="let element"> {{element.extension}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.extension}}"> {{element.extension}} </td>
             </ng-container>
 
             <!-- <ng-container matColumnDef="title">
@@ -70,7 +71,7 @@
 
             <ng-container matColumnDef="comment">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Comment </th>
-                <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.comment}}"> {{element.comment}} </td>
             </ng-container>
 
             <!-- <ng-container matColumnDef="">
@@ -80,7 +81,7 @@
 
             <ng-container matColumnDef="ip">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> IP </th>
-                <td mat-cell *matCellDef="let element"> {{element.ip}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.ip}}"> {{element.ip}} </td>
             </ng-container>
 
             <!-- <ng-container matColumnDef="">
@@ -90,7 +91,7 @@
 
             <ng-container matColumnDef="time">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Time </th>
-                <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+                <td mat-cell *matCellDef="let element" title="{{element.time}}"> {{element.time}} </td>
             </ng-container>
 
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
