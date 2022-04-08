@@ -35,6 +35,17 @@ as-split > as-split-area > pre {
   overflow-x: auto;
 }
 
+.mat-column-time {
+  white-space: nowrap;
+}
+
+.mat-column-path {
+  max-width: 25rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;
