@@ -46,6 +46,16 @@ as-split > as-split-area > pre {
   text-overflow: ellipsis;
 }
 
+::ng-deep .as-split-gutter {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::ng-deep .as-split-gutter {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;
