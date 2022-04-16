@@ -13,23 +13,31 @@ export class HeaderComponent implements OnInit {
 
   fileSub!: Subscription
   selectedFileName!: string;
+  isLoading: boolean = false;
 
   ngOnInit(): void {
     this.fileSub = this.FileHandleService.getselectedFileDataListener()
       .subscribe((selectedFileData: { selectedFileName: string }) => {
         this.selectedFileName = selectedFileData.selectedFileName
+        this.isLoading = false
       })
   }
 
   fileChanged(event: Event): void {
+    this.isLoading = true
     this.FileHandleService.fileChange(event)
       .then(() => { })
-      .catch(() => { })
+      .catch((err) => {
+        this.isLoading = false
+      })
   }
 
   fileRemoved(): void {
+    this.isLoading = true
     this.FileHandleService.fileClear()
-      .then(() => { })
+      .then(() => {
+        this.isLoading = false
+      })
       .catch(() => { })
   }
 }
