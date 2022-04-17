@@ -102,9 +102,11 @@
     <as-split-area [size]="40" *ngIf="clickedRow">
         <as-split direction="horizontal" [gutterSize]=7>
             <as-split-area>
+                <div class="label">Request</div>
                 <pre>{{ clickedRow.request }}</pre>
             </as-split-area>
             <as-split-area>
+                <div class="label">Response</div>
                 <pre>{{ clickedRow.response }}</pre>
             </as-split-area>
         </as-split>

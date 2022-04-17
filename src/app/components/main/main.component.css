@@ -25,10 +25,17 @@ tr.mat-header-row {
   background-color: rgba(0, 0, 0, 0.144);
 }
 
-as-split>as-split-area>pre {
-  margin: 0;
+as-split>as-split-area pre {
+  margin: 0px;
+  padding: 2px;
   overflow: auto;
-  height: 100%;
+  height: calc(100% - 42px);
+}
+
+as-split>as-split-area .label {
+  background-color: rgba(195, 195, 195, 1);
+  padding: 10px;
+}
 }
 
 *>.as-split-area {
@@ -98,5 +105,9 @@ as-split>as-split-area>pre {
 
   ::ng-deep .as-split-gutter {
     background-color: rgba(255, 255, 255, 0.12);
+  }
+
+  as-split>as-split-area .label {
+    background-color: rgba(60, 60, 60, 1);
   }
 }
