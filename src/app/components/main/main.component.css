@@ -25,13 +25,13 @@ tr.mat-header-row {
   background-color: rgba(0, 0, 0, 0.144);
 }
 
-as-split > as-split-area > pre {
+as-split>as-split-area>pre {
   margin: 0;
   overflow: auto;
   height: 100%;
 }
 
-* > .as-split-area {
+*>.as-split-area {
   overflow-x: auto;
 }
 
@@ -50,23 +50,30 @@ as-split > as-split-area > pre {
   background-color: rgba(0, 0, 0, 0.12);
 }
 
-@media (prefers-color-scheme: dark) {
-  ::ng-deep .as-split-gutter {
-    background-color: rgba(255, 255, 255, 0.12);
-  }
+.mat-table .mat-cell:not(:nth-child(1)),
+.mat-table .mat-header-cell:not(:nth-child(1)) {
+  padding: 0 10px;
+}
+
+.table-container {
+  height: 100%;
+  overflow: auto;
 }
 
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;
   }
+
   .mat-cell,
   .mat-footer-cell {
     color: rgba(255, 255, 255, 0.87);
   }
+
   mat-row {
     border-bottom-color: #e0e0e0;
   }
+
   mat-row,
   mat-header-row,
   mat-footer-row,
@@ -88,14 +95,8 @@ as-split > as-split-area > pre {
   .mat-table .mat-header-cell {
     border-right: 1px solid rgba(255, 255, 255, 0.12);
   }
-}
 
-.mat-table .mat-cell:not(:nth-child(1)),
-.mat-table .mat-header-cell:not(:nth-child(1)) {
-  padding: 0 10px;
-}
-
-.table-container {
-  height: 100%;
-  overflow: auto;
+  ::ng-deep .as-split-gutter {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
 }
