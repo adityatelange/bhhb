@@ -38,6 +38,7 @@
           },
           "configurations": {
             "production": {
+              "subresourceIntegrity": true,
               "budgets": [
                 {
                   "type": "initial",
