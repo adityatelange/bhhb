@@ -79,8 +79,8 @@ as-split>as-split-area>div>button {
   text-overflow: ellipsis;
 }
 
-::ng-deep .as-split-gutter {
-  background-color: rgba(0, 0, 0, 0.12);
+:host ::ng-deep .as-split-gutter {
+  background-color: rgba(0, 0, 0, 0.12) !important;
 }
 
 .mat-table .mat-cell:not(:nth-child(1)),
@@ -129,8 +129,8 @@ as-split>as-split-area>div>button {
     border-right: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-  ::ng-deep .as-split-gutter {
-    background-color: rgba(255, 255, 255, 0.12);
+  :host ::ng-deep .as-split-gutter {
+    background-color: rgba(255, 255, 255, 0.12) !important;
   }
 
   as-split>as-split-area .label {
