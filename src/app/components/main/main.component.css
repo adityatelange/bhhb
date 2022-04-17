@@ -29,13 +29,39 @@ as-split>as-split-area pre {
   margin: 0px;
   padding: 2px;
   overflow: auto;
-  height: calc(100% - 42px);
+  height: calc(100% - 45px);
 }
 
 as-split>as-split-area .label {
   background-color: rgba(195, 195, 195, 1);
   padding: 10px;
+  display: flex;
 }
+
+as-split>as-split-area pre.wrapy {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+as-split>as-split-area div.label button.active {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(29, 30, 32);
+}
+
+as-split>as-split-area>div>button {
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+  user-select: none;
+  cursor: pointer;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 4px;
+  color: rgb(29, 30, 32);
+  background-color: rgb(235, 235, 235);
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
 }
 
 *>.as-split-area {

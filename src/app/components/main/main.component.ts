@@ -22,6 +22,8 @@ export class MainComponent implements OnInit {
   dataSource = new MatTableDataSource();
   ELEMENT_DATA: any = [];
   clickedRow!: any;
+  wrapRequest: boolean = false;
+  wrapResponse: boolean = false;
 
   ngOnInit(): void {
     this.fileSub = this.FileHandleService.getselectedFileDataListener()
