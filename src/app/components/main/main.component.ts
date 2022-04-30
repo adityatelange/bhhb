@@ -66,8 +66,8 @@ export class MainComponent implements OnInit {
           time: element.time,
           mimetype: element.mimetype,
           extension: element.extension != 'null' ? element.extension : '',
-          request: this.parseReqRes(element.request),
-          response: this.parseReqRes(element.response)
+          request: this.atobReqRes(element.request),
+          response: this.atobReqRes(element.response)
         }
       )
       position += 1;
@@ -78,16 +78,12 @@ export class MainComponent implements OnInit {
     moveItemInArray(this.displayedColumns, event.previousIndex, event.currentIndex);
   }
 
-  private parseReqRes(query: any): string {
-    if (query[0].$.base64 === 'true') {
-      return this.atobReqRes(query);
-    }
-    return query[0]._;
-  }
-
   private atobReqRes(query: any): string {
     try {
-      return atob(query[0]._)
+      if (query[0].$.base64 === 'true') {
+        return this.atobReqRes(query);
+      }
+      return query[0]._;
     } catch (error) {
       console.log(error);
       console.log(query);
