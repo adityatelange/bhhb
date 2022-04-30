@@ -80,7 +80,10 @@ export class MainComponent implements OnInit {
 
   private atobReqRes(query: any): string {
     try {
-      return atob(query[0]._)
+      if (query[0].$.base64 === 'true') {
+        return atob(query[0]._);
+      }
+      return query[0]._;
     } catch (error) {
       console.log(error);
       console.log(query);
