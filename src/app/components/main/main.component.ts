@@ -37,7 +37,7 @@ export class MainComponent implements OnInit {
         }
         this.selectedFileName = selectedFileData.selectedFileName
         this.selectedFileContent = selectedFileData.selectedFileContent
-        console.log(this.selectedFileContent);
+        // console.log(this.selectedFileContent);
         this.elementDataGen(this.selectedFileContent)
         this.dataSource = new MatTableDataSource(this.ELEMENT_DATA);
         this.dataSource.sort = this.sort;
