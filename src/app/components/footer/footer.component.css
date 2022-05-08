@@ -1,12 +1,17 @@
 .navbar-footer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   width: 100%;
   height: 20px;
   background: rgb(255, 255, 255);
   color: inherit;
   margin: 0 16px;
+}
+
+.navbar-footer span {
+  padding: 0 2px;
+  height: 20px;
+  font-size: 15px;
 }
 
 .toolbar-spacer {

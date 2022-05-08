@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { FileHandleService } from '../../services/file-handle/file-handle.service'
+import { BurpExport } from '../../services/file-handle/file-handle.service'
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private FileHandleService: FileHandleService) { }
+
+  fileSub!: Subscription;
+  burpVersion!: string;
+  exportTime!: string;
 
   ngOnInit(): void {
+    this.fileSub = this.FileHandleService.getselectedFileDataListener()
+      .subscribe((selectedFileData: { selectedFileContent: BurpExport | undefined }) => {
+        this.burpVersion = selectedFileData.selectedFileContent!.items.$.burpVersion;
+        this.exportTime = selectedFileData.selectedFileContent!.items.$.exportTime;
+      })
   }
 
 }
