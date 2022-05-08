@@ -16,7 +16,6 @@ export class MainComponent implements OnInit {
   constructor(private FileHandleService: FileHandleService) { }
 
   fileSub!: Subscription
-  selectedFileName!: string;
   selectedFileContent!: BurpExport | undefined;
   displayedColumns: string[] = ['position', 'host', 'method', 'path', 'status', 'responselength', 'mimetype', 'extension', 'comment', 'ip', 'time'];
   dataSource = new MatTableDataSource();
@@ -27,15 +26,13 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
     this.fileSub = this.FileHandleService.getselectedFileDataListener()
-      .subscribe((selectedFileData: { selectedFileName: string, selectedFileContent: BurpExport | undefined }) => {
-        if (!selectedFileData.selectedFileContent || !selectedFileData.selectedFileName) {
+      .subscribe((selectedFileData: { selectedFileContent: BurpExport | undefined }) => {
+        if (!selectedFileData.selectedFileContent) {
           this.dataSource = new MatTableDataSource();
-          this.selectedFileName = selectedFileData.selectedFileName;
           this.selectedFileContent = selectedFileData.selectedFileContent;
           this.clickedRow = undefined;
           return
         }
-        this.selectedFileName = selectedFileData.selectedFileName
         this.selectedFileContent = selectedFileData.selectedFileContent
         // console.log(this.selectedFileContent);
         this.elementDataGen(this.selectedFileContent)
