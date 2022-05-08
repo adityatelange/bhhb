@@ -19,6 +19,10 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {
     this.fileSub = this.FileHandleService.getselectedFileDataListener()
       .subscribe((selectedFileData: { selectedFileContent: BurpExport | undefined }) => {
+        if (!selectedFileData.selectedFileContent) {
+          this.burpVersion = this.exportTime = '';
+          return
+        }
         this.burpVersion = selectedFileData.selectedFileContent!.items.$.burpVersion;
         this.exportTime = selectedFileData.selectedFileContent!.items.$.exportTime;
       })
