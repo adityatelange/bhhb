@@ -25,11 +25,16 @@ tr.mat-header-row {
   background-color: rgba(0, 0, 0, 0.144);
 }
 
-as-split>as-split-area pre {
+as-split>as-split-area .content {
   margin: 0px;
   padding: 2px;
   overflow: auto;
   height: calc(100% - 45px);
+}
+
+as-split>as-split-area .content {
+  font-family: monospace;
+  white-space: pre;
 }
 
 as-split>as-split-area .label {
@@ -38,7 +43,7 @@ as-split>as-split-area .label {
   display: flex;
 }
 
-as-split>as-split-area pre.wrapy {
+as-split>as-split-area .content.wrapy {
   white-space: pre-wrap;
   word-break: break-word;
 }

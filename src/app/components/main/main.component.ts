@@ -63,8 +63,8 @@ export class MainComponent implements OnInit {
           time: element.time,
           mimetype: element.mimetype,
           extension: element.extension != 'null' ? element.extension : '',
-          request: this.atobReqRes(element.request),
-          response: this.atobReqRes(element.response)
+          request: this.splitHeaderBody(this.atobReqRes(element.request)),
+          response: this.splitHeaderBody(this.atobReqRes(element.response))
         }
       )
       position += 1;
@@ -73,6 +73,11 @@ export class MainComponent implements OnInit {
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.displayedColumns, event.previousIndex, event.currentIndex);
+  }
+
+  private splitHeaderBody(text: any): any {
+    const [first, ...rest] = text.split(/\n\s*\n/)
+    return [first, rest]
   }
 
   private atobReqRes(query: any): string {
