@@ -10,7 +10,7 @@ export class PwaUpdateService {
 
   constructor(private readonly SwUpdate: SwUpdate, private _snackBar: MatSnackBar) {
     if (environment.production) {
-      this.SwUpdate.activateUpdate().then(() => {
+      this.SwUpdate.checkForUpdate().then(() => {
         const message = 'App Update available! Choose Ok to update';
         this._snackBar.open(message, "Ok", {
           duration: 3000
