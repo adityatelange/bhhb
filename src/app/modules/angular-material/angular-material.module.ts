@@ -9,7 +9,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AngularSplitModule } from 'angular-split';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -26,7 +25,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     DragDropModule,
     AngularSplitModule,
     MatProgressBarModule,
-    MatSnackBarModule
   ]
 })
 export class AngularMaterialModule { }

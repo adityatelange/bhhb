@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { PwaUpdateService } from "../app/services/pwa-update/pwa-update.service"
 
 @Component({
   selector: 'app-root',
@@ -8,5 +7,4 @@ import { PwaUpdateService } from "../app/services/pwa-update/pwa-update.service"
 })
 export class AppComponent {
   title = 'burp-http-history-browser';
-  constructor(private PwaUpdateService: PwaUpdateService) { }
 }
