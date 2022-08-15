@@ -98,6 +98,10 @@ as-split>as-split-area>div>button {
   overflow: auto;
 }
 
+.header_key {
+  color: darkblue;
+}
+
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;
@@ -140,5 +144,9 @@ as-split>as-split-area>div>button {
 
   as-split>as-split-area .label {
     background-color: rgba(60, 60, 60, 1);
+  }
+
+  .header_key {
+    color: lightblue;
   }
 }
