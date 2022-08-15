@@ -29,7 +29,7 @@ as-split>as-split-area .content {
   margin: 0px;
   padding: 2px;
   overflow: auto;
-  height: calc(100% - 45px);
+  height: calc(100% - 42px);
 }
 
 as-split>as-split-area .content {
