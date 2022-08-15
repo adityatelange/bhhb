@@ -76,7 +76,13 @@
                     <button [class.active]="wrapRequest" (click)="wrapRequest = !wrapRequest">Wrap</button>
                 </div>
                 <div class="content" [class.wrapy]="wrapRequest">
-                    <div id="req_headers">{{ clickedRow.request[0] }}</div>
+                    <div id="res_headers">
+                        <div *ngFor="let row of clickedRow.request[0]">
+                            <span class="header_key">{{ row[0] }}</span>
+                            <span *ngIf="row[1]">:&nbsp;</span>
+                            <span class="header_val">{{ row[1] }}</span>
+                        </div>
+                    </div>
                     <br><br>
                     <div id="req_body">{{ clickedRow.request[1] }}</div>
                 </div>
@@ -88,7 +94,13 @@
                     <button [class.active]="wrapResponse" (click)="wrapResponse = !wrapResponse">Wrap</button>
                 </div>
                 <div class="content" [class.wrapy]="wrapResponse">
-                    <div id="res_headers">{{ clickedRow.response[0] }}</div>
+                    <div id="res_headers">
+                        <div class="header_inner" *ngFor="let row of clickedRow.response[0]">
+                            <span class="header_key">{{ row[0] }}</span>
+                            <span *ngIf="row[1]">:&nbsp;</span>
+                            <span class="header_val">{{ row[1] }}</span>
+                        </div>
+                    </div>
                     <br><br>
                     <div id="res_body">{{ clickedRow.response[1] }}</div>
                 </div>

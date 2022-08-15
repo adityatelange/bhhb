@@ -76,8 +76,17 @@ export class MainComponent implements OnInit {
   }
 
   private splitHeaderBody(text: any): any {
-    const [first, ...rest] = text.split(/\n\s*\n/)
-    return [first, rest]
+    // https://bobbyhadz.com/blog/javascript-split-string-only-on-first-instance-of-character
+    var [header, ...body] = text.split(/\n\s*\n/)
+    header = header.split(/\r\n/)
+
+    // https://stackoverflow.com/a/12482991
+    header.forEach((elem: string, index: string | number) => {
+      let [key, ...value] = elem.split(": ")
+      header[index] = [key, value.join("")]
+    }, header);
+   
+    return [header, body.join("")]
   }
 
   private atobReqRes(query: any): string {
