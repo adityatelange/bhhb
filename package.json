@@ -1,6 +1,6 @@
 {
   "name": "burp-http-history-browser",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A tool to browse/view exported HTTP history from Burp",
   "scripts": {
     "ng": "ng",
