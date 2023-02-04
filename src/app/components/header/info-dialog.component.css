@@ -1,0 +1,65 @@
+::ng-deep .mat-dialog-container {
+    box-shadow: unset;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+::ng-deep .mat-dialog-container button {
+    border: 1px solid rgba(0, 0, 0, 0.12) !important;
+}
+
+
+a:link,
+a:visited {
+    color: inherit;
+}
+
+ul {
+    padding: 0 15px;
+}
+
+.ext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ext a {
+    padding: 4px;
+    display: inline-block;
+}
+
+.btn {
+    word-wrap: break-word;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    appearance: none;
+    text-align: center;
+    box-shadow: none;
+}
+
+.btn:hover svg {
+    transform: scale(1.1)
+}
+
+.btn svg {
+    transition: transform .15s cubic-bezier(0.2, 0, 0.13, 2);
+    transform: scale(1);
+    margin-right: 8px !important;
+    display: inline-block;
+    overflow: visible !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    ::ng-deep .mat-dialog-container {
+        background-color: rgb(29, 30, 32);
+        color: initial;
+    }
+
+    ::ng-deep .mat-dialog-container button {
+        border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    }
+}

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent, InfoDialogComponent } from './components/header/header.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
   declarations: [
     AppComponent,
     HeaderComponent,
+    InfoDialogComponent,
     MainComponent,
     FooterComponent
   ],
