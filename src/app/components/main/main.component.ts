@@ -17,7 +17,7 @@ export class MainComponent implements OnInit {
 
   fileSub!: Subscription
   selectedFileContent!: BurpExport | undefined;
-  displayedColumns: string[] = ['position', 'host', 'method', 'path', 'status', 'responselength', 'mimetype', 'extension', 'comment', 'ip', 'time'];
+  displayedColumns: string[] = ['position', 'host', 'method', 'path', 'title', 'status', 'responselength', 'mimetype', 'extension', 'comment', 'ip', 'time'];
   dataSource = new MatTableDataSource();
   ELEMENT_DATA: any = [];
   clickedRow!: any;
@@ -64,7 +64,8 @@ export class MainComponent implements OnInit {
           mimetype: element.mimetype,
           extension: element.extension != 'null' ? element.extension : '',
           request: this.splitHeaderBody(this.atobReqRes(element.request)),
-          response: this.splitHeaderBody(this.atobReqRes(element.response))
+          response: this.splitHeaderBody(this.atobReqRes(element.response)),
+          title: this.extractTitleFromHttpResponse(this.atobReqRes(element.response)),
         }
       )
       position += 1;
@@ -110,6 +111,15 @@ export class MainComponent implements OnInit {
     } else {
       return ':' + port
     }
+  }
+
+  private extractTitleFromHttpResponse(response: string): string {
+    const titleRegex = /<title>(.*?)<\/title>/i;
+    const match = response.match(titleRegex);
+    if (match && match.length > 1) {
+     return match[1];
+   }
+   return '';
   }
 
   @HostListener('window:keydown.esc', ['$event'])
