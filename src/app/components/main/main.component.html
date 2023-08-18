@@ -47,6 +47,11 @@
                 <td mat-cell *matCellDef="let element" title="{{element.extension}}"> {{element.extension}} </td>
             </ng-container>
 
+            <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Title </th>
+                <td mat-cell *matCellDef="let element" title="{{element.title}}"> {{element.title}} </td>
+            </ng-container>
+
             <ng-container matColumnDef="comment">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header cdkDrag> Comment </th>
                 <td mat-cell *matCellDef="let element" title="{{element.comment}}"> {{element.comment}} </td>
