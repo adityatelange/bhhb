@@ -41,6 +41,7 @@ as-split>as-split-area .label {
   background-color: rgba(195, 195, 195, 1);
   padding: 10px;
   display: flex;
+  max-height: 18px;
 }
 
 as-split>as-split-area .content.wrapy {
