@@ -5,6 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { BurpExport } from '../../services/file-handle/file-handle.service'
+import { Base64 } from 'js-base64';
 
 @Component({
   selector: 'app-main',
@@ -86,14 +87,14 @@ export class MainComponent implements OnInit {
       let [key, ...value] = elem.split(": ")
       header[index] = [key, value.join("")]
     }, header);
-   
+
     return [header, body.join("")]
   }
 
   private atobReqRes(query: any): string {
     try {
       if (query[0].$.base64 === 'true') {
-        return atob(query[0]._ ?? "");
+        return Base64.decode(query[0]._ ?? "");
       }
       return query[0]._ ?? "";
     } catch (error) {
