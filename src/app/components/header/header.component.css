@@ -15,6 +15,10 @@ mat-toolbar {
   color: inherit;
 }
 
+svg {
+  fill: currentColor;
+}
+
 .hidden {
   display: none;
 }

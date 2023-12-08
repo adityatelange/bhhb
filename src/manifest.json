@@ -1,6 +1,7 @@
 {
   "name": "Burp HTTP history browser",
-  "short_name": "BHHB",
+  "short_name": "bhhb",
+  "description": "A tool to view HTTP history exported from Burp Suite Community Edition",
   "theme_color": "#0a0a0a",
   "background_color": "#fafafa",
   "display": "standalone",
@@ -10,7 +11,7 @@
     {
       "src": "favicon.ico",
       "type": "image/x-icon",
-      "sizes": "16x16 32x32"
+      "sizes": "32x32"
     },
     {
       "src": "assets/icon-192.png",
@@ -33,6 +34,14 @@
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/bhhb.png",
+      "type": "image/png",
+      "sizes": "1920x979",
+      "form_factor": "wide"
     }
   ]
 }

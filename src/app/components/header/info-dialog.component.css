@@ -7,6 +7,9 @@
     border: 1px solid rgba(0, 0, 0, 0.12) !important;
 }
 
+svg {
+    fill: currentColor;
+}
 
 a:link,
 a:visited {
