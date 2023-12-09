@@ -76,7 +76,7 @@
         <as-split direction="horizontal" [gutterSize]=7>
             <as-split-area>
                 <div class="label">
-                    <span>Request</span>
+                    <span>Request #{{clickedRow.position}}</span>
                     <span class="toolbar-spacer"></span>
                     <button [class.active]="wrapRequest" (click)="wrapRequest = !wrapRequest">Wrap</button>
                 </div>
