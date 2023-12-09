@@ -6,6 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { BurpExport } from '../../services/file-handle/file-handle.service'
 import { Base64 } from 'js-base64';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-main',
@@ -118,9 +119,24 @@ export class MainComponent implements OnInit {
     const titleRegex = /<title>(.*?)<\/title>/i;
     const match = response.match(titleRegex);
     if (match && match.length > 1) {
-     return match[1];
-   }
-   return '';
+      return match[1];
+    }
+    return '';
+  }
+
+  extractBodyFromHttpResponse(clickedRow: any): any {
+    let file_name = clickedRow.request[0][0][0].split(' ')[1].replace(/\//g, "#");
+    let respose_headers = clickedRow.response[0];
+    let content_type = "application/octet-stream";
+    respose_headers.forEach((header: string[]) => {
+      if (header[0] == 'Content-Type') {
+        content_type = header[1];
+      }
+    });
+    let content = clickedRow.response[1]
+    var file = new File([content], file_name, { type: content_type });
+    saveAs(file);
+    return;
   }
 
   @HostListener('window:keydown.esc', ['$event'])

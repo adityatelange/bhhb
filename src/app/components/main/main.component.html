@@ -96,6 +96,7 @@
                 <div class="label">
                     <span>Response</span>
                     <span class="toolbar-spacer"></span>
+                    <button (click)="extractBodyFromHttpResponse(clickedRow)">Download Body</button>
                     <button [class.active]="wrapResponse" (click)="wrapResponse = !wrapResponse">Wrap</button>
                 </div>
                 <div class="content" [class.wrapy]="wrapResponse">

@@ -103,6 +103,10 @@ as-split>as-split-area>div>button {
   color: darkblue;
 }
 
+.label button {
+  margin: 0 5px;
+}
+
 @media (prefers-color-scheme: dark) {
   .mat-table {
     background: 0;
