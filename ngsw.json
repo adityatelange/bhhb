@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1702066611182,
+  "timestamp": 1702097416185,
   "index": "/bhhb/index.html",
   "assetGroups": [
     {
@@ -30,7 +30,6 @@
       "urls": [
         "/bhhb/assets/apple-touch-icon.png",
         "/bhhb/assets/bhhb.png",
-        "/bhhb/assets/ic_launcher_foreground.png",
         "/bhhb/assets/icon-192-maskable.png",
         "/bhhb/assets/icon-192.png",
         "/bhhb/assets/icon-512-maskable.png",
@@ -41,14 +40,13 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/bhhb/assets/apple-touch-icon.png": "2fbf3af0ca3e24350f4601e85c23aaa6b96213cf",
+    "/bhhb/assets/apple-touch-icon.png": "7c4fe4471d4c8d1d664177fbbb09f8f1f414ec51",
     "/bhhb/assets/bhhb.png": "5730f4cb3e7c898d81f65f2e5dbd7ce20d61e573",
-    "/bhhb/assets/ic_launcher_foreground.png": "5f219c51d46a5d0fa6f1af892031434deb426110",
-    "/bhhb/assets/icon-192-maskable.png": "0113ede8f3076846de81a05fb2d8dc6caafb0da5",
-    "/bhhb/assets/icon-192.png": "e305fdaee845022bee3d62bd8cf975e683edcc16",
-    "/bhhb/assets/icon-512-maskable.png": "0db431a460b1d83f393b5577cd65d42b9857e101",
-    "/bhhb/assets/icon-512.png": "cfcc9a3c568d09d0def3c6ba06e3fd35466623fe",
-    "/bhhb/favicon.ico": "29ef53decc38799ea633c05f5f9a7d121fe348c1",
+    "/bhhb/assets/icon-192-maskable.png": "166bb5339bcd381dfe7858fe2fb2f4d96df0cdd3",
+    "/bhhb/assets/icon-192.png": "667de21010e91d3ec8f8b38c92cf613b26016887",
+    "/bhhb/assets/icon-512-maskable.png": "d624d570f28ec0cc969054688cef6860b0308e37",
+    "/bhhb/assets/icon-512.png": "3a767688a48e57bb8c9e31767f71dd076e935ad1",
+    "/bhhb/favicon.ico": "2bdb3858d0f79b351f88468e44cc87ed02149a6e",
     "/bhhb/index.html": "3a15d33974d146cd0345b7723c2ec6495b8d325d",
     "/bhhb/main.605f9221a2e4c84d.js": "353c615b118a555faa6bfaeb794424cb7abe01c9",
     "/bhhb/polyfills.01ab5fa3a56cf981.js": "727e5bfbf272fe0fbfcebd94044f5c51ddc70246",
