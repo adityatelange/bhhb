@@ -10,4 +10,5 @@
     <span *ngIf="burpVersion">Burp Version: {{ burpVersion }}</span>
     <span *ngIf="exportTime && burpVersion">&nbsp;|&nbsp;</span>
     <span *ngIf="exportTime">Exported at: {{ exportTime }}</span>
+    <span *ngIf="!burpVersion || !exportTime">Details about the export will be available here.</span>
 </nav>
