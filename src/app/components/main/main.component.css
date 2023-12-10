@@ -103,8 +103,23 @@ as-split>as-split-area>div>button {
   color: darkblue;
 }
 
+.search {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  height: 30px;
+  padding-inline-start: 10px;
+  font-size: 15px;
+}
+
+.search:focus {
+  outline-offset: -2px;
+}
+
+
 @media (prefers-color-scheme: dark) {
-  .mat-table {
+  .mat-table,
+  .search {
     background: 0;
   }
 
@@ -149,5 +164,9 @@ as-split>as-split-area>div>button {
 
   .header_key {
     color: lightblue;
+  }
+
+  .search {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   }
 }

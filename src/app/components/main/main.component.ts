@@ -118,14 +118,24 @@ export class MainComponent implements OnInit {
     const titleRegex = /<title>(.*?)<\/title>/i;
     const match = response.match(titleRegex);
     if (match && match.length > 1) {
-     return match[1];
-   }
-   return '';
+      return match[1];
+    }
+    return '';
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value ? (event.target as HTMLInputElement).value : "";
+    this.dataSource.filter = filterValue.trim();
   }
 
   @HostListener('window:keydown.esc', ['$event'])
   clearclickedRow(event: KeyboardEvent) {
     event.preventDefault();
-    this.clickedRow = undefined
+    if (this.clickedRow) {
+      this.clickedRow = undefined;
+    } else {
+      (document.getElementById('search') as HTMLInputElement).value = "";
+      this.applyFilter(event)
+    }
   }
 }
