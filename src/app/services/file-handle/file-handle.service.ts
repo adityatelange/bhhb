@@ -37,7 +37,7 @@ export class FileHandleService {
 
       this.selectedFileName = files[0].name
 
-      var reader = new FileReader();
+      let reader = new FileReader();
       reader.readAsText(files[0]);
       reader.onload = (_event) => {
         xml2js.parseStringPromise(reader.result as string)

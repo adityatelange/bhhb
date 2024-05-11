@@ -79,7 +79,7 @@ export class MainComponent implements OnInit {
 
   private splitHeaderBody(text: any): any {
     // https://bobbyhadz.com/blog/javascript-split-string-only-on-first-instance-of-character
-    var [header, ...body] = text.split(/\n\s*\n/)
+    let [header, ...body] = text.split(/\n\s*\n/)
     header = header.split(/\r\n/)
 
     // https://stackoverflow.com/a/12482991
