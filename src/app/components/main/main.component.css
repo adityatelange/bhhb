@@ -30,9 +30,6 @@ as-split>as-split-area .content {
   padding: 2px;
   overflow: auto;
   height: calc(100% - 42px);
-}
-
-as-split>as-split-area .content {
   font-family: monospace;
   white-space: pre;
 }
