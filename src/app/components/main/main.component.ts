@@ -1,10 +1,9 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
-import { FileHandleService } from '../../services/file-handle/file-handle.service'
+import { FileHandleService, BurpExport } from '../../services/file-handle/file-handle.service'
 import { Subscription } from 'rxjs';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-import { BurpExport } from '../../services/file-handle/file-handle.service'
 import { Base64 } from 'js-base64';
 
 @Component({

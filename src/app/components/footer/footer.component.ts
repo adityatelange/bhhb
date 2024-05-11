@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { FileHandleService } from '../../services/file-handle/file-handle.service'
-import { BurpExport } from '../../services/file-handle/file-handle.service'
+import { FileHandleService, BurpExport } from '../../services/file-handle/file-handle.service'
 
 @Component({
   selector: 'app-footer',
