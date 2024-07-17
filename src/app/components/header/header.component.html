@@ -8,21 +8,29 @@
             </g>
         </svg>
         <button mat-icon-button aria-label="info" (click)="infoDialog()" matTooltip="Info">
-            <mat-icon>help</mat-icon>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                <path
+                    d="M480-280q17 0 28.5-11.5T520-320v-160q0-17-11.5-28.5T480-520q-17 0-28.5 11.5T440-480v160q0 17 11.5 28.5T480-280Zm0-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+            </svg>
         </button>
         <span class="toolbar-spacer"></span>
         <span>{{ this.selectedFileName }}</span>
         <button mat-icon-button aria-label="Open File" matTooltip="Open File" (click)="fileInput.click()"
             *ngIf="!this.selectedFileName">
-            <mat-icon aria-hidden="false" aria-label="Open File">
-                file_open
-            </mat-icon>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+                <path
+                    d="M720-320h146q17 0 28.5 11.5T906-280q0 17-11.5 28.5T866-240h-50l90 90q11 11 11 27.5T906-94q-12 12-28.5 12T849-94l-89-89v49q0 17-11.5 28.5T720-94q-17 0-28.5-11.5T680-134v-146q0-17 11.5-28.5T720-320ZM520-800v160q0 17 11.5 28.5T560-600h160L520-800Zm-280-80h287q16 0 30.5 6t25.5 17l194 194q11 11 17 25.5t6 30.5v167q0 17-11.5 28.5T760-400H640q-17 0-28.5 11.5T600-360v240q0 17-11.5 28.5T560-80H240q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880Z" />
+            </svg>
             <input #fileInput type="file" class="hidden" accept="*" (change)="fileChanged($event)" />
         </button>
-        <button mat-icon-button aria-label="Clear selected File" matTooltip="Clear selected File" (click)="fileRemoved()"
-            *ngIf="this.selectedFileName">
+        <button mat-icon-button aria-label="Clear selected File" matTooltip="Clear selected File"
+            (click)="fileRemoved()" *ngIf="this.selectedFileName">
             <mat-icon aria-hidden="false" aria-label="Clear selected File">
-                clear
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="currentColor">
+                    <path
+                        d="m480-424 116 116q11 11 28 11t28-11q11-11 11-28t-11-28L536-480l116-116q11-11 11-28t-11-28q-11-11-28-11t-28 11L480-536 364-652q-11-11-28-11t-28 11q-11 11-11 28t11 28l116 116-116 116q-11 11-11 28t11 28q11 11 28 11t28-11l116-116Zm0 344q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                </svg>
             </mat-icon>
         </button>
     </nav>
